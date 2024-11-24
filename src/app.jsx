@@ -14,7 +14,6 @@ import ContractPage from "./components/ContractPage";
 import LanguagesPage from "./components/LanguagesPage";
 import { HelmetProvider } from "react-helmet-async";
 import { AnimatePresence, motion } from "framer-motion";
-import ReactGa from 'react-ga'
 import { Analytics } from "@vercel/analytics/react"
 import { useLocation,Route,Router ,Routes} from "react-router-dom";
 
