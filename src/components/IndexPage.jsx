@@ -1,6 +1,7 @@
 import React, {  Suspense,lazy ,useMemo} from "react";
 import { Link as ScrollLink } from "react-scroll";
 import Footer from './foooter';
+import Switcher from "./switcher";
 const About = lazy(() => import("./about"));
 const Services = lazy(() => import("./services"));
 const AgencyTab = lazy(() => import("./agencyTab"));
@@ -225,6 +226,7 @@ const loadClientData =async (lang) => {
       <About />
       <GetInTouch />
       <WhatsAppFloatingButton />
+      <Switcher/>
       <Footer />
       </Suspense>
   );
