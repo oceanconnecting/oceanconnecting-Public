@@ -1,18 +1,26 @@
 import { render } from 'preact';
 import App from './app';
-import './index.css'
-// Ensure the selector matches the ID of your root element in index.html
-const rootElement = document.getElementById('root');
-import { BrowserRouter } from 'react-router-dom'
+import './index.css';
+import { BrowserRouter } from 'react-router-dom';
+import ReactGa from 'react-ga';
+import { SpeedInsights } from '@vercel/speed-insights/react';
+import { Analytics } from '@vercel/analytics/react';
+import './components/i18n';
 
-import ReactGa from 'react-ga'
-import { SpeedInsights } from "@vercel/speed-insights/next"
-ReactGa.initialize('G-7VD9KSTCK9')
-import './components/i18n'
+ReactGa.initialize('G-7VD9KSTCK9');
+
+const rootElement = document.getElementById('root');
 if (rootElement) {
   render(
-  <BrowserRouter><App />,</BrowserRouter>,
-   rootElement);
+    <BrowserRouter>
+      <Analytics>
+        <SpeedInsights>
+          <App />
+        </SpeedInsights>
+      </Analytics>
+    </BrowserRouter>,
+    rootElement
+  );
 } else {
   console.error('Root element not found! Ensure there is a <div id="root"></div> in your index.html.');
 }
