@@ -235,7 +235,7 @@ const JobListings = React.memo(() => {
         <Container>
          
           <FilterContainer className='m-10'>
-            <FilterSelect value={selectedType} onChange={handleTypeChange}>
+            <FilterSelect value={selectedType} oninput={handleTypeChange}>
               {jobTypes.map((type) => (
                 <option key={type} value={type}>
                   {type}

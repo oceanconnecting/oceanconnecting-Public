@@ -164,13 +164,13 @@ const CourseCard = React.memo(() => {
                 type="text"
                 placeholder="Search by title"
                 value={searchTerm}
-                onChange={handleSearch}
+                oninput={handleSearch}
                 className="focus:border-blue-500 transform md:scale-100 scale-110"
               />
 
               <FilterSelect
                 value={filter}
-                onChange={handleFilterChange}
+                oninput={handleFilterChange}
                 className="focus:border-blue-500 transform md:scale-100 scale-110"
               >
                 {filterOptions.map(option => (

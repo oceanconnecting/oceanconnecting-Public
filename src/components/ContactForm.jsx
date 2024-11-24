@@ -148,7 +148,7 @@ const ContactForm =React.memo( () => {
                   placeholder={field.placeholder}
                   name={field.name}
                   value={formData[field.name]}
-                  onChange={handleChange}
+                  oninput={handleChange}
                   className="pl-12 pr-4 py-3 w-full border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50 dark:bg-gray-700 dark:text-white"
                   aria-label={field.placeholder}
                   style={{
@@ -163,7 +163,7 @@ const ContactForm =React.memo( () => {
               placeholder="Message"
               name="message"
               value={formData.message}
-              onChange={handleChange}
+              oninput={handleChange}
               className="col-span-1 lg:col-span-2 p-4 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50 dark:bg-gray-700 dark:text-white"
               rows="4"
               aria-label="Message"

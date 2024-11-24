@@ -98,12 +98,12 @@ const ContractWorksPage =React.memo( () => {
               type="text"
               placeholder="Search by job title or sector..."
               value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
+              oninput={(e) => setSearchTerm(e.target.value)}
               className="px-4 py-2 mr-4 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <select
               value={filterCountry}
-              onChange={(e) => setFilterCountry(e.target.value)}
+              oninput={(e) => setFilterCountry(e.target.value)}
               className="px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               <option value="">All Countries</option>

@@ -172,7 +172,7 @@ const GetInTouch= React.memo( function GetInTouch() {
               className="mt-1 block w-full py-1.5 px-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
               placeholder={t(item.name)}
               value={formData.name}
-              onChange={handleChange}
+              oninput={handleChange}
               required
             />
 
@@ -186,7 +186,7 @@ const GetInTouch= React.memo( function GetInTouch() {
               className="mt-1 block w-full py-1.5 px-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
               placeholder={t(item.email)}
               value={formData.email}
-              onChange={handleChange}
+              oninput={handleChange}
               required
             />
 
@@ -200,7 +200,7 @@ const GetInTouch= React.memo( function GetInTouch() {
               className="mt-1 block w-full py-1.5 px-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
               placeholder={t(item.question)}
               value={formData.subject}
-              onChange={handleChange}
+              oninput={handleChange}
               required
             />
 
@@ -213,7 +213,7 @@ const GetInTouch= React.memo( function GetInTouch() {
               className="mt-1 block w-full py-1.5 px-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
               placeholder={t(item.comment)}
               value={formData.comments}
-              onChange={handleChange}
+              oninput={handleChange}
               rows="3"
               required
             />
