@@ -13,11 +13,9 @@ const rootElement = document.getElementById('root');
 if (rootElement) {
   render(
     <BrowserRouter>
-      <Analytics>
-        <SpeedInsights>
+     
           <App />
-        </SpeedInsights>
-      </Analytics>
+        
     </BrowserRouter>,
     rootElement
   );
