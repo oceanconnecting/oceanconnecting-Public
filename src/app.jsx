@@ -1,4 +1,4 @@
-import "./App.css";
+import "./app.css";
 import "./assets/css/tailwind.css";
 import "./assets/css/materialdesignicons.min.css";
 import "leaflet/dist/leaflet.css";
