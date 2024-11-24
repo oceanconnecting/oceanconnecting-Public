@@ -13,7 +13,8 @@ const rootElement = document.getElementById('root');
 if (rootElement) {
   render(
     <BrowserRouter>
-     
+     <SpeedInsights/>
+     <Analytics/>
           <App />
         
     </BrowserRouter>,
