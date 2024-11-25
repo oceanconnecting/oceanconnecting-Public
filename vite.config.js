@@ -18,8 +18,13 @@ const routes = [
 ];
 
 export default defineConfig({
+  alias: {
+    'react': 'preact/compat',
+    'react-dom': 'preact/compat',
+  },
   plugins: [
     preact(),
+    
     AutoImport({
       imports: [
         {
