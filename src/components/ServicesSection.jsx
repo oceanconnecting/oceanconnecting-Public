@@ -1,5 +1,5 @@
 // ServicesSection.js
-import React from 'react';
+import React from 'preact/compat';
 import { FaStethoscope, FaSyringe, FaBandAid, FaBaby, FaProcedures, FaHeartbeat, FaPrescriptionBottle, FaTint } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 const loadClientData = (lang) => {

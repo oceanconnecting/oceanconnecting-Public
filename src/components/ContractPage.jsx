@@ -1,6 +1,6 @@
 // src/components/ContractWorksPage.js
 
-import React from 'react';
+import React from 'preact/compat';
 import Navbar from './navbar';
 import Footer from './foooter';
 import Modal from './Modall';

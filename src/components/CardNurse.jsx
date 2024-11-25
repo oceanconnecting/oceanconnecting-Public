@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'preact/compat';
 import { FaCheckCircle, FaUserShield, FaHandHoldingHeart, FaSmileBeam } from 'react-icons/fa';
 
 

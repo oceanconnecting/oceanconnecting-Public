@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'preact/compat';
 import { FaQuoteLeft } from 'react-icons/fa';
 import avatar1 from '../assets/images/done/TeamNurse/avatar.jpg';
 import avatar2 from '../assets/images/done/TeamNurse/avatar.jpg';

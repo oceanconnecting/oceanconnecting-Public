@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'preact/compat';
 import { Link } from "react-router-dom";
 import Navbar from "../navbar";
 import Footer from "../foooter"; // Note: Corrected 'foooter' to 'footer'

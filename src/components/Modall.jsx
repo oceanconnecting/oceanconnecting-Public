@@ -1,6 +1,6 @@
 // src/components/Modal.js
 
-import React from 'react';
+import React from 'preact/compat';
 import { FaTimes, FaMapMarkerAlt, FaCalendarAlt, FaMoneyBillWave, FaInfoCircle } from 'react-icons/fa';
 
 const Modal = React.memo(({ contract, onClose }) => {
