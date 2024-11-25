@@ -1,4 +1,4 @@
-import React, {  Suspense,lazy ,useMemo} from "react";
+import React, {  Suspense,lazy ,useMemo} from "preact/compat";
 import { Link as ScrollLink } from "react-scroll";
 import Footer from './foooter';
 import Switcher from "./switcher";
@@ -211,11 +211,21 @@ const loadClientData =async (lang) => {
 
           
           </TextBlock>
-          <ImageWrapper data-aos="fade-left" className="" isVisible>
-  <LazyLoad height={400} offset={100} once>
-    <img src={images[currentImage]} alt="Design Team" />
-  </LazyLoad>
-</ImageWrapper>
+          <ImageWrapper data-aos="fade-left" isVisible>
+            <LazyLoad height={400} offset={100} once>
+              <img
+                src={images[currentImage].src}
+                alt={images[currentImage].alt}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                srcSet={`
+                  ${heroImage1} 768w,
+                  ${heroImage2} 1200w,
+                  ${heroImage4} 1600w
+                `}
+              />
+            </LazyLoad>
+          </ImageWrapper>
+
 
         </ContentWrapper>
       </Section>
