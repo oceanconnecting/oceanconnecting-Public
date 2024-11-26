@@ -1,5 +1,5 @@
 import React from "preact/compat";
-const nurseImage="https://firebasestorage.googleapis.com/v0/b/oceangallery-d06ae.appspot.com/o/Site%20ocean%2Fservice.png?alt=media&token=b54504fc-6722-431f-8787-d75218233c1b"
+const nurseImage="./assets/images/home/nurse.png"
 import { FaUser, FaEnvelope, FaPhone, FaStethoscope } from "react-icons/fa"; // Medical icons
   const loadClientData = async (lang) => {
     try {
