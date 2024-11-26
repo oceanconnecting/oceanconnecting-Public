@@ -17,8 +17,13 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Analytics } from "@vercel/analytics/react"
 import { useLocation,Route,Router ,Routes} from "react-router-dom";
 import NotFoundPage from "./components/NotFoundPage";
+import ReactGA from 'react-ga';
 const App=React.memo( function App() {
   const location = useLocation();
+  useEffect(() => {
+    ReactGA.initialize('G-F9B954V37R'); // Replace with your tracking ID
+    ReactGA.pageview(window.location.pathname + window.location.search); // Track page view on initial load
+  }, []);
   const pageVariants = {
     initial: {
       opacity: 0,

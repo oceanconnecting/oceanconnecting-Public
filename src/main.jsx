@@ -15,8 +15,7 @@ if (rootElement) {
     <BrowserRouter>
      <SpeedInsights/>
      <Analytics/>
-          <App />
-        
+          <App/>
     </BrowserRouter>,
     rootElement
   );

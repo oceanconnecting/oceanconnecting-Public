@@ -24,7 +24,6 @@ export default defineConfig({
   },
   plugins: [
     preact(),
-    
     AutoImport({
       imports: [
         {
