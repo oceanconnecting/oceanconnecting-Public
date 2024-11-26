@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import preact from '@preact/preset-vite';
 import AutoImport from 'unplugin-auto-import/vite';
 import SitemapPlugin from 'vite-plugin-sitemap';
+import compression from 'vite-plugin-compression2';
 
 const routes = [
   '/',
@@ -14,7 +15,6 @@ const routes = [
   '/soins-infirmiers-agadir',
   '/recrutement-international-agadir',
   '/languages',
-  // Add any other static routes here
 ];
 
 export default defineConfig({
@@ -27,26 +27,23 @@ export default defineConfig({
     AutoImport({
       imports: [
         {
-          'preact/hooks': [
-            'useState',
-            'useEffect',
-          ],
-          'react-i18next': [
-            'useTranslation',
-          ],
-          'react-router-dom': [
-            'Link',
-            'useParams',
-          ],
+          'preact/hooks': ['useState', 'useEffect'],
+          'react-i18next': ['useTranslation'],
+          'react-router-dom': ['Link', 'useParams'],
         },
       ],
     }),
+    compression({
+      algorithm: 'gzip', // Use gzip compression
+      ext: '.gz', // File extension for compressed files
+      threshold: 0, // Compress all files regardless of size
+      filter: /\.(js|mjs|css|html|svg|json|ttf|woff|woff2)$/, // Include JavaScript and other assets
+      deleteOriginalAssets: false, // Keep original files
+    }),
     SitemapPlugin({
-      hostname: 'https://oceanconnecting.ma', // Replace with your site URL
-      outDir: 'dist', // The output directory for the sitemap
-      routes, // Use the manually defined routes here
-      // If you have dynamic routes, you can generate them manually
-    
+      hostname: 'https://oceanconnecting.ma',
+      outDir: 'dist',
+      routes,
     }),
   ],
 });

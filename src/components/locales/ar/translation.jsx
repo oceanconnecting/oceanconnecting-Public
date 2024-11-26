@@ -39,7 +39,7 @@ import resume from '../../../assets/images/job/resume.png'
 import recrutocean from '../../../assets/images/service/recrutocean.png'
 import recrutinter from '../../../assets/images/service/recrutinter2.png'
 import form from '../../../assets/images/form.pdf'
-const heroImage1 = "../../../assets/images/home/nurse.png"
+import heroImage1 from "../../../assets/images/home/nurse.png"
 console.log("d")
   export const servicesAR = [
     {
