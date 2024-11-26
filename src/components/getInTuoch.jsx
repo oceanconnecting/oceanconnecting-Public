@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "preact/compat";
 import contact2 from '../assets/images/done/contact.svg';
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";

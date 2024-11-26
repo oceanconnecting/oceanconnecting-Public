@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "preact/compat";
 import Navbar from "./navbar";
 import Formation from "./formation";
 import Footer from "./foooter";

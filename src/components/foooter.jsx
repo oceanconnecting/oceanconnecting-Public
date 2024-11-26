@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'preact/compat';
 import { useTranslation } from 'react-i18next';
 import { HiLocationMarker } from "react-icons/hi";
 import { PiPhoneCallFill, PiInstagramLogoFill } from "react-icons/pi";

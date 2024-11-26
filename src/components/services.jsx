@@ -1,4 +1,5 @@
-import React from "preact/compat";
+
+import { memo } from "preact/compat";
 import { useTranslation } from "react-i18next";
 import './i18n';
 import AOS from 'aos';
@@ -117,4 +118,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default memo(Services);

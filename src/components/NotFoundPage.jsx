@@ -1,4 +1,4 @@
-import React from "react";
+import React from "preact/compat";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -38,7 +38,7 @@ const Button = styled.a`
   }
 `;
 
-const NotFoundPage = () => {
+const NotFoundPage = React.memo(() => {
   return (
     <Container>
       <Title>404</Title>
@@ -46,6 +46,6 @@ const NotFoundPage = () => {
       <Button href="/">Go Back Home</Button>
     </Container>
   );
-};
+});
 
 export default NotFoundPage;
