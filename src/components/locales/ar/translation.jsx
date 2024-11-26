@@ -40,6 +40,7 @@ import recrutocean from '../../../assets/images/service/recrutocean.png'
 import recrutinter from '../../../assets/images/service/recrutinter2.png'
 import form from '../../../assets/images/form.pdf'
 const heroImage1 = "../../../assets/images/home/nurse.png"
+console.log("d")
   export const servicesAR = [
     {
       title: "الأمان",
