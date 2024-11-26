@@ -29,6 +29,7 @@
     "i18next-browser-languagedetector": "^8.0.0",
     "leaflet": "^1.9.4",
     "preact": "^10.24.3",
+    "preact-router": "^4.1.2",
     "react-countup": "^6.5.3",
     "react-ga": "^3.3.1",
     "react-grid-gallery": "^1.0.1",

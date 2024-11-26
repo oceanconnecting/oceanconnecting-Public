@@ -3,6 +3,7 @@
 import { Link as ScrollLink } from "react-scroll";
 import LanguageSwitcher from "./LanguageSwitcher";
 import img from ".././assets/images/ocean3.png"
+import { useRef } from "preact/hooks";
 import { useTranslation } from "react-i18next";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { motion } from "framer-motion";
@@ -49,13 +50,14 @@ const useIsMobile = () => {
 export default function Navbar() {
   const [scroll, setScroll] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [dropdowns, setDropdowns] = useState(null); // Garder la trace des dropdowns ouverts
+  const [dropdowns, setDropdowns] = useState(null);
+  const navbarRef = useRef(null); // Reference for the navbar container
   const { i18n, t } = useTranslation();
   const [navbar, setNavbar] = useState([]);
   const [serviceData, setServiceData] = useState([]);
   const [blogData, setBlogData] = useState([]);
   const isMobile = useIsMobile();
-  // Charger les données en fonction de la langue
+
   useEffect(() => {
     const fetchData = async () => {
       const { navbar, serviceData, blogData } = await loadClientData(i18n.language);
@@ -66,36 +68,51 @@ export default function Navbar() {
     fetchData();
   }, [i18n.language]);
 
-  // Gérer le changement d'arrière-plan de la navbar en fonction du scroll
   useEffect(() => {
     const handleScroll = () => {
       setScroll(window.scrollY > 50);
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  const location = useLocation();
-  const isHomePage = location.pathname === '/';
+  // Close the menu or dropdown on a global click
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+        setMenuOpen(false); // Close the menu
+        setDropdowns(null); // Close the dropdowns
+      }
+    };
 
-  // Fonction pour basculer l'état du dropdown
+    if (menuOpen || dropdowns !== null) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [menuOpen, dropdowns]);
+
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
+
   const handleDropdownToggle = (dropdownType) => {
     if (dropdowns === dropdownType) {
-      setDropdowns(null); // Fermer le dropdown si déjà ouvert
+      setDropdowns(null);
     } else {
-      setDropdowns(dropdownType); // Ouvrir le dropdown
+      setDropdowns(dropdownType);
     }
   };
 
-  // Fonction pour fermer les dropdowns lors d'un clic sur un lien
   const closeDropdownOnLinkClick = () => {
-    setDropdowns(null); // Fermer les dropdowns
+    setDropdowns(null);
   };
-  const isArabic = i18n.language === 'ar';
-  const fontSize = isArabic ? 'font-bold' : 'text-base';
-const limitedItems=serviceData.slice(1,7)
+
+  const isArabic = i18n.language === "ar";
+  const fontSize = isArabic ? "font-bold" : "text-base";
   return (
     <>
       <style>{`
@@ -139,16 +156,16 @@ const limitedItems=serviceData.slice(1,7)
           transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
       `}</style>
-
-      <motion.nav
-className={`navbar fixed top-0 w-full z-50 transition-all duration-300 ${isMobile ? "bg-white shadow-lg" : scroll ? "bg-white shadow-lg" : "bg-transparent"}`}
-        initial={{ y: -100 }}  // Position initiale de la navbar hors écran
-        animate={{ 
-          y: 0,  // Faire apparaître la navbar
-          backgroundColor: scroll ? "#fff" : "rgba(0, 0, 0, 0)",  // Changer le fond au scroll
-        }}
-        transition={{ duration: 0.5 }}  // Durée de l'animation
-      >
+ <motion.nav
+      ref={navbarRef} // Attach the reference to the navbar
+      className={`navbar fixed top-0 w-full z-50 transition-all duration-300 ${isMobile ? "bg-white shadow-lg" : scroll ? "bg-white shadow-lg" : "bg-transparent"}`}
+      initial={{ y: -100 }}
+      animate={{
+        y: 0,
+        backgroundColor: scroll ? "#fff" : "rgba(0, 0, 0, 0)",
+      }}
+      transition={{ duration: 0.5 }}
+    >
         <div className="mx-auto px-4 flex flex-wrap items-center justify-between">
           {/* Logo */}
           <Link to="/">
