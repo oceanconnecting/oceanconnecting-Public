@@ -1,4 +1,4 @@
-import React from "react";
+import React from "preact/compat";
 import './i18n';
 import LanguageSwitcher from "./LanguageSwitcher";
 import TinySlider from "tiny-slider-react";

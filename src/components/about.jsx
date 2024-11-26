@@ -1,4 +1,4 @@
-import React from "react";
+import React from "preact/compat";
 import aboutImage from '../assets/images/about.jpg'; // Replace with your image path
 import CountUp from 'react-countup';
 import { motion } from 'framer-motion';

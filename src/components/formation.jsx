@@ -1,6 +1,6 @@
 
 import styled from "styled-components";
-import React from "react";
+import React from "preact/compat";
 import { Link } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
 // Function to load client data based on the language

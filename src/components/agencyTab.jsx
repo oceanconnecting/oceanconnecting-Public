@@ -1,4 +1,4 @@
-import React from "react";
+import React from "preact/compat";
 import styled, { keyframes } from "styled-components";
 import { FiArrowRight, FiUserCheck, FiBriefcase, FiLayers } from "react-icons/fi";
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React from "preact/compat";
 import { useTranslation } from "react-i18next";
 import './i18n';
 import AOS from 'aos';

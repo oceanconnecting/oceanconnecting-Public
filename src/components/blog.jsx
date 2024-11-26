@@ -1,4 +1,4 @@
-import React from "react"; 
+import React from "preact/compat"; 
 import styled, { keyframes } from "styled-components";
 import {  FiShare2, FiArrowRight } from 'react-icons/fi'; // Import the arrow icon
 

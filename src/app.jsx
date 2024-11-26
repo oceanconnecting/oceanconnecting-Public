@@ -2,7 +2,7 @@ import "./app.css";
 import "./assets/css/tailwind.css";
 import "./assets/css/materialdesignicons.min.css";
 import "leaflet/dist/leaflet.css";
-import React from "react";
+import React from "preact/compat";
 import Index from "./components/IndexPage.jsx";
 import Formation from "./components/formationPage.jsx";
 import Jobs from "./components/recruitment/Jobs";
@@ -16,7 +16,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { AnimatePresence, motion } from "framer-motion";
 import { Analytics } from "@vercel/analytics/react"
 import { useLocation,Route,Router ,Routes} from "react-router-dom";
-
+import NotFoundPage from "./components/NotFoundPage";
 const App=React.memo( function App() {
   const location = useLocation();
   const pageVariants = {
@@ -83,6 +83,23 @@ const App=React.memo( function App() {
                 }}
               >
                 <Formation />
+              </motion.div>
+            }
+          />
+           <Route
+            path="*"
+            element={
+              <motion.div
+                style={pageStyle}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -50 }}
+                transition={{
+                  duration: 0.6,
+                  ease: [0.42, 0, 0.58, 1],
+                }}
+              >
+                <NotFoundPage />
               </motion.div>
             }
           />
