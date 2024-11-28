@@ -75,7 +75,7 @@ const Services = () => {
         </h1>))}
 
         {/* Services grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-20 ">
           {limitedItems.map((skill) => (
             <Link
               to={skill.link}

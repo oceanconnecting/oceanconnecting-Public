@@ -19,7 +19,6 @@ import heroImage4 from "../assets/images/home/dev.png"
 import heroImage2 from "../assets/images/home/glasse.png"
 import axios from 'axios'
 import { useTranslation } from "react-i18next";
-import { useLocation } from "react-router-dom";
 // Styled Components
 
 const Section = styled.section`

@@ -87,7 +87,7 @@ export const blogDataEN = [
         register:"To register, simply click here ",
         resrveButton:"For reservation",
         title: 'Language Training Programs',
-        desc: 'At Ocean Connecting, we offer specialized language training programs designed to help individuals and professionals master five essential languages: English, Spanish, German, French, and Italian. ...',
+        desc: 'Ocean Connecting offers expert language training in English, Spanish, German, French, and Italian to help you excel.',
         detail: "At Ocean Connecting, we offer specialized language training programs designed to help individuals and professionals master five essential languages: English, Spanish, German, French, and Italian.",
         why_choose_us: {
           expert_instructors: "- Expert Instructors: Learn from certified professionals with extensive teaching experience.",
