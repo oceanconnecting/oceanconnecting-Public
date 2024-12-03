@@ -125,7 +125,7 @@ const App=React.memo( function App() {
             }
           />
           <Route
-            path="/jobs/:type"
+            path="/offres-emploi/:type"
             element={
               <motion.div
                 style={pageStyle}
@@ -142,7 +142,7 @@ const App=React.memo( function App() {
             }
           />
           <Route
-            path="/jobs"
+            path="/offres-emploi"
             element={
               <motion.div
                 style={pageStyle}

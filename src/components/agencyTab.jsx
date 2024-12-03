@@ -213,7 +213,7 @@ const AgencyTab=React.memo( function AgencyTab() {
                 <CardContent>
                   <Title>{t(item.title2)}</Title>
                   <Description>{t(item.desc2)}</Description>
-                  <Link to={`/jobs/${t(item.type)}`}>
+                  <Link to={`/offres-emploi/${t(item.type)}`}>
                     <CTAButton>
                       {t(item.button)} <FiArrowRight />
                     </CTAButton>

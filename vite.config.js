@@ -8,13 +8,12 @@ const routes = [
   '/',
   '/formation-professionnelle-agadir',
   '/formation-professionnelle-agadir/:name',
-  '/jobs/:type',
-  '/jobs',
+  '/offres-emploi/:type',
+  '/offres-emploi',
   '/gallery',
   '/gallery/:id',
   '/soins-infirmiers-agadir',
   '/recrutement-international-agadir',
-  '/languages',
 ];
 
 export default defineConfig({

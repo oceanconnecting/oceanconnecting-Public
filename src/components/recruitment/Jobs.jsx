@@ -210,7 +210,7 @@ const JobListings = React.memo(() => {
   const handleTypeChange = (e) => {
     const newType = e.target.value;
     setSelectedType(newType);
-    navigate(`/jobs/${newType}`);
+    navigate(`/offres-emploi/${newType}`);
   };
   const openModal = (job) => {
     setSelectedJob(job);

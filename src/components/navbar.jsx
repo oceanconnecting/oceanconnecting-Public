@@ -254,7 +254,7 @@ export default function Navbar() {
 
                 {/* Lien vers les Jobs */}
                 <li className="nav-item ms-0">
-                  <Link className="nav-link" to="/jobs" onClick={closeDropdownOnLinkClick}>
+                  <Link className="nav-link" to="/offres-emploi" onClick={closeDropdownOnLinkClick}>
                     {t(item.Jobs)}
                   </Link>
                 </li>
