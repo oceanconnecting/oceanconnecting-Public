@@ -11,7 +11,6 @@ import Gallery from "./components/Gallery/gallery";
 import GalleryDetail from "./components/Gallery/detailgallery";
 import TeamNurse from "./components/TeamNurse";
 import ContractPage from "./components/ContractPage";
-import LanguagesPage from "./components/LanguagesPage";
 import { HelmetProvider } from "react-helmet-async";
 import { AnimatePresence, motion } from "framer-motion";
 import { Analytics } from "@vercel/analytics/react"
@@ -197,24 +196,6 @@ const App=React.memo( function App() {
           <Route path="/soins-infirmiers-agadir" element={<TeamNurse />} />
           <Route path="/recrutement-international-agadir" element={<ContractPage />} />
         
-          <Route
-            path="/languages"
-            element={
-              <motion.div
-                style={pageStyle}
-                initial="initial"
-                animate="in"
-                exit="out"
-                variants={pageVariants}
-                transition={{
-                  duration: 0.6,
-                  ease: [0.43, 0.13, 0.23, 0.96],
-                }}
-              >
-                <LanguagesPage />
-              </motion.div>
-            }
-          />
         </Routes>
         <Analytics/> 
       

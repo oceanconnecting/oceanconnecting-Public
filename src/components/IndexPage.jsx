@@ -208,26 +208,19 @@ const loadClientData =async (lang) => {
       </ScrollLink>
     </div>
   ))}
-</div>
-
-          
+   </div>        
           </TextBlock>
           <ImageWrapper data-aos="fade-left" isVisible>
             <LazyLoad height={400} offset={100} once>
             <img
   src={images[currentImage]}
   alt={`Slide ${currentImage}`}
- 
-/>
-
-              
+/>             
             </LazyLoad>
           </ImageWrapper>
-
     {/* sizes="(max-width: 768px) 100vw, 50vw" */}
-        </ContentWrapper>
+      </ContentWrapper>
       </Section>
-
       <Services />
       <Blogs />
       <AgencyTab />
