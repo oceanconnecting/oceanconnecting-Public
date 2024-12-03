@@ -282,12 +282,7 @@ const JobListings = React.memo(() => {
                       <span>{t(job.contratime)}</span>
                     </JobDetail>
                   )}
-                  {job.pricecontrat && (
-                    <JobDetail>
-                      <FaGlobeAmericas />
-                      <span>{t(job.pricecontrat)}</span>
-                    </JobDetail>
-                  )}
+                 
                 </JobContent>
                 
                 {/* Button placed at the bottom */}
