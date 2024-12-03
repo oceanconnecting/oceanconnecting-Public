@@ -19,11 +19,28 @@ import NotFoundPage from "./components/NotFoundPage";
 import ReactGA from 'react-ga';
 const App=React.memo( function App() {
   const location = useLocation();
-  useEffect(() => {
-    ReactGA.initialize('G-F9B954V37R'); // Replace with your tracking ID
-    ReactGA.pageview(window.location.pathname + window.location.search); // Track page view on initial load
-  }, []);
-  const pageVariants = {
+    useEffect(() => {
+        // Add Google Analytics script
+        const script = document.createElement("script");
+        script.src = `https://www.googletagmanager.com/gtag/js?id=G-LHCVR17P5K`;
+        script.async = true;
+        document.body.appendChild(script);
+
+        // Initialize Google Analytics
+        window.dataLayer = window.dataLayer || [];
+        function gtag(...args) {
+            window.dataLayer.push(args);
+        }
+        gtag("js", new Date());
+        gtag("config", "G-LHCVR17P5K"); // Replace with your Measurement ID
+
+        return () => {
+            // Cleanup script if needed
+            document.body.removeChild(script);
+        };
+    }, []);
+
+    const pageVariants = {
     initial: {
       opacity: 0,
       y: 50,
