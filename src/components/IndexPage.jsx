@@ -16,7 +16,7 @@ import { Helmet } from "react-helmet-async";
 import LazyLoad from 'react-lazyload';
 import heroImage1 from "../assets/images/home/nurse.png"
 import heroImage4 from "../assets/images/home/dev.png"
-
+import heroImage2 from "../assets/images/home/new.jpeg"
 import axios from 'axios'
 import { useTranslation } from "react-i18next";
 // Styled Components
@@ -85,6 +85,7 @@ const ImageWrapper = styled.div`
     height: auto;
     width: 600px;
     height: 400px;
+     border-radius: 25px;
     object-fit: cover;
     transition: opacity 2s ease-in-out;
     opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
@@ -115,7 +116,7 @@ const loadClientData =async (lang) => {
   });
 
   // List of images for automatic switching
-  const images = useMemo(() => [heroImage1, heroImage4], []);
+  const images = useMemo(() => [heroImage2, heroImage1, heroImage4], []);
 
   useEffect(() => {
     const fetchMetaData = async () => {
@@ -217,8 +218,8 @@ const loadClientData =async (lang) => {
                 alt={images[currentImage].alt}
                 sizes="(max-width: 768px) 100vw, 50vw"
                 srcSet={`
-                  ${heroImage1} 768w,
-                
+                  ${heroImage2} 768w,
+                  ${heroImage1} 1200w,
                   ${heroImage4} 1600w
                 `}
               />
