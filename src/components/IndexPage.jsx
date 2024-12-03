@@ -116,7 +116,7 @@ const loadClientData =async (lang) => {
   });
 
   // List of images for automatic switching
-  const images = useMemo(() => [heroImage2, heroImage1, heroImage4], []);
+  const images = useMemo(() => [heroImage1, heroImage2, heroImage4]);
 
   useEffect(() => {
     const fetchMetaData = async () => {
@@ -152,9 +152,10 @@ const loadClientData =async (lang) => {
     const timeout = setTimeout(() => {
       setCurrentImage((prevImage) => (prevImage + 1) % images.length);
     }, 3000);
-
-    return () => clearTimeout(timeout);
+  
+    return () => clearTimeout(timeout); // Clear timeout to avoid memory leaks
   }, [currentImage, images.length]);
+  
   const aggregateRating = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -213,20 +214,17 @@ const loadClientData =async (lang) => {
           </TextBlock>
           <ImageWrapper data-aos="fade-left" isVisible>
             <LazyLoad height={400} offset={100} once>
-              <img
-                src={images[currentImage].src}
-                alt={images[currentImage].alt}
-                sizes="(max-width: 768px) 100vw, 50vw"
-                srcSet={`
-                  ${heroImage2} 768w,
-                  ${heroImage1} 1200w,
-                  ${heroImage4} 1600w
-                `}
-              />
+            <img
+  src={images[currentImage]}
+  alt={`Slide ${currentImage}`}
+ 
+/>
+
+              
             </LazyLoad>
           </ImageWrapper>
 
-
+    {/* sizes="(max-width: 768px) 100vw, 50vw" */}
         </ContentWrapper>
       </Section>
 
