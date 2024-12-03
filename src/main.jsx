@@ -7,7 +7,7 @@ import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Analytics } from '@vercel/analytics/react';
 import './components/i18n';
 
-ReactGa.initialize('G-7VD9KSTCK9');
+ReactGa.initialize('G-LHCVR17P5K');
 
 const rootElement = document.getElementById('root');
 if (rootElement) {
