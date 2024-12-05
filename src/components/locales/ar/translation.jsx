@@ -681,6 +681,81 @@ export const ContactAR=[{
 }]
 
 
+export const footerDataFr = {
+    "socialLinks": [ // Changed from array to object
+        { "id": 1, "label": "Facebook", "to": "https://www.facebook.com/the.ocean.connecting/" },
+        { "id": 2, "label": "Instagram", "to": "https://www.instagram.com/oceanconnecting.ma/" },
+        { "id": 3, "label": "YouTube", "to": "https://www.youtube.com/@OceanConnecting" },
+        { "id": 4, "label": "LinkedIn", "to": "https://www.linkedin.com/company/ocean-connecting/?originalSubdomain=ma" }
+    ],
+    "contactInfo": [
+        {
+            "id": 1,
+            "Icon": "HiLocationMarker",
+            "title": "Adresse",
+            "content": "Immeubles Coralia, 2ème étage, ISLAN, Hay Mohammadi, AGADIR"
+        },
+        {
+            "id": 2,
+            "Icon": "PiPhoneCallFill",
+            "title": "Appelez-nous",
+            "content": "+212 704-309787"
+        },
+        {
+            "id": 3,
+            "Icon": "MdMarkEmailRead",
+            "title": "Envoyez-nous un e-mail",
+            "content": "oceanconnecting.ma@gmail.com"
+        }
+    ],
+    "pageElements": [
+        { "id": 1, "label": "Accueil", "link": "/" },
+        { "id": 2, "label": "Services", "link": "/formation-professionnelle-agadir" },
+        { "id": 3, "label": "Formation", "link": "/offres-emploi" },
+        { "id": 4, "label": "À propos de nous", "link": "/About" },
+        { "id": 5, "label": "Contact", "link": "/Contact" }
+    ],
+    "pagelangague": [
+        { "id": 1, "label": "Anglais", "link": "https://oceanconnecting.com/english/learn" },
+        { "id": 2, "label": "Espagnol", "link": "https://oceanconnecting.com/Spain/learn" },
+        { "id": 3, "label": "Allemagne", "link": "https://oceanconnecting.com/German/learn" },
+        { "id": 4, "label": "Italie", "link": "https://oceanconnecting.com/Italie/learn" },
+        { "id": 5, "label": "Frances", "link": "https://oceanconnecting.com/french/learn"  }
+    ],
+    "ourServices": [
+        { "id": 1, "label": "Development Informatique", "link": "https://www.oceanconnecting.dev" },
+        { "id": 2, "label": "Formation", "link": "/formation-professionnelle-agadir" },
+        { "id": 3, "label": "Des façades propres", "link": "https://www.oceanconnecting.net/en" },
+        { "id": 4, "label": "Recrutement", "link": "/offres-emploi" },
+        { "id": 5, "label": "Domiciliation", "link": "/Domiciliation" }
+    ],
+
+    "ourFormation": [
+        { "id": 1, "label": "First aid", "link": "/Development" },
+        { "id": 2, "label": "Dj training", "link": "/formation-professionnelle-agadir/agent-checkin-aeroport-agadir" },
+        { "id": 3, "label": "elevator training", "link": "/formation-professionnelle-agadir/théatre-enfants-agadir"  },
+        { "id": 4, "label": "airport checkin agent training", "link": "/formation-professionnelle-agadir/agent-checkin-aeroport-agadir" },
+        { "id": 5, "label": "training in cinematography and directing", "link": "/formation-professionnelle-agadir/train-tramway-agadir" }
+    ],
+
+    "footerText": {
+        "logoAlt": "RAKAR Logo",
+        "mainDescription": "NOUS SOMMES PROFESSIONNELS",
+        "detailedDescription": "Nous sommes spécialisés dans le placement et l'assistance documentaire à l'échelle mondiale, offrant un soutien sur mesure dans plusieurs langues pour vous aider à naviguer dans les opportunités de carrière internationales.",
+        "ourServicesTitle": "Nos services",
+        "ourPageTitle": "Nos pages",
+        "ourlangagueTitle": "Langues enseignées",
+        "ourFormationTitle": "Formation",
+
+    },
+    "footerCopyright": {
+        "text": "Droit d'auteur © ",
+        "company": "Ocean Connecting",
+        "allRightsReserved": "Tous droits réservés.",
+        "message": "Nous vous remercions de votre visite sur notre site web et vous souhaitons la bienvenue à ",
+
+    }
+};
 export const footerDataAr = {
     "socialLinks": [ // Changed from array to object
         { "id": 1, "label": "Facebook", "to": "https://www.facebook.com/the.ocean.connecting/" },
@@ -710,33 +785,35 @@ export const footerDataAr = {
     ],
     "pageElements": [
         { "id": 1, "label": "الرئيسية", "link": "/" },
-        { "id": 2, "label": "التكوينات", "link": "/formation" },
-        { "id": 3, "label": "التوضيف", "link": "/jobs" },
+        { "id": 2, "label": "التكوينات", "link": "/formation-professionnelle-agadir" },
+        { "id": 3, "label": "التوضيف", "link": "/offres-emploi" },
         { "id": 4, "label": "معرض الصور", "link": "/gallery" },
         { "id": 5, "label": "من نحن", "link": "/" },
         { "id": 6, "label": "تواصل معنا", "link": "/Contact" }
     ],
+
     "pagelangague": [
-        { "id": 1, "label": "الإنجليزية", "link": "/Home" },
-        { "id": 2, "label": "الإسبانية", "link": "/Services" },
-        { "id": 3, "label": "الألمانية", "link": "/Formation" },
-        { "id": 4, "label": "الإيطالية", "link": "/About" },
-        { "id": 5, "label": "الفرنسية", "link": "/Contact" }
+        { "id": 1, "label": "الإنجليزية", "link": "https://oceanconnecting.com/english/learn" },
+        { "id": 2, "label": "الإسبانية", "link": "https://oceanconnecting.com/Spain/learn"  },
+        { "id": 3, "label": "الألمانية", "link": "https://oceanconnecting.com/German/learn" },
+        { "id": 4, "label": "الإيطالية", "link": "https://oceanconnecting.com/Italie/learn" },
+        { "id": 5, "label": "الفرنسية", "link": "https://oceanconnecting.com/french/learn" }
     ],
+
     "ourServices": [
-        { "id": 1, "label": "إنشاء المواقع و التطبيقات", "link": "/team" },
-        { "id": 2, "label": "التدريبات", "link": "/team" },
-        { "id": 3, "label": "تنضيف الواجهات", "link": "/teamglass" },
-        { "id": 4, "label": "التوضيف الخارجي", "link": "/jobs" },
-        { "id": 5, "label": "التمريض حتى المنزل", "link": "/nurse" },
+        { "id": 1, "label": "إنشاء المواقع و التطبيقات", "link": "https://www.oceanconnecting.dev"  },
+        { "id": 2, "label": "التدريبات", "link": "/formation-professionnelle-agadir"  },
+        { "id": 3, "label": "تنضيف الواجهات", "link": "https://www.oceanconnecting.net/en" },
+        { "id": 4, "label": "التوضيف الخارجي", "link": "/offres-emploi" },
+        { "id": 5, "label": "التمريض حتى المنزل", "link": "/soins-infirmiers-agadir" },
         { "id": 6, "label": "إنشاء شركة", "link": "/" }
     ],
     "ourFormation": [
         { "id": 1, "label": "تكوين الإسعافات الأولية", "link": "/" },
-        { "id": 2, "label": "تكوين الدي جي", "link": "/formation/3" },
-        { "id": 3, "label": "تكوين صيانة المصاعد الألية", "link": "/formation/13" },
-        { "id": 4, "label": "تكوين وكلاء تسجيل الرحلات بالمطار", "link": "/formation/2" },
-        { "id": 5, "label": "تكوين في الإنتاج السينيمائي و الإخراج", "link": "/" }
+        { "id": 2, "label": "تكوين الدي جي", "link": "/formation-professionnelle-agadir/agent-checkin-aeroport-agadir"  },
+        { "id": 3, "label": "تكوين صيانة المصاعد الألية", "link": "/formation-professionnelle-agadir/théatre-enfants-agadir" },
+        { "id": 4, "label": "تكوين وكلاء تسجيل الرحلات بالمطار", "link": "/formation-professionnelle-agadir/agent-checkin-aeroport-agadir"  },
+        { "id": 5, "label": "تكوين في الإنتاج السينيمائي و الإخراج", "link": "/formation-professionnelle-agadir/train-tramway-agadir"}
     ],
     "footerText": {
         "logoAlt": "RAKAR Logo",

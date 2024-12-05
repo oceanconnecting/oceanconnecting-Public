@@ -772,6 +772,8 @@ export const GalleryFR = [
 
 
 ]
+
+
 export const footerDataFr = {
     "socialLinks": [ // Changed from array to object
         { "id": 1, "label": "Facebook", "to": "https://www.facebook.com/the.ocean.connecting/" },
@@ -800,33 +802,35 @@ export const footerDataFr = {
         }
     ],
     "pageElements": [
-        { "id": 1, "label": "Accueil", "link": "/Home" },
-        { "id": 2, "label": "Services", "link": "/Services" },
-        { "id": 3, "label": "Formation", "link": "/Formation" },
+        { "id": 1, "label": "Accueil", "link": "/" },
+        { "id": 2, "label": "Services", "link": "/formation-professionnelle-agadir\"" },
+        { "id": 3, "label": "Formation", "link": "/offres-emploi" },
         { "id": 4, "label": "À propos de nous", "link": "/About" },
         { "id": 5, "label": "Contact", "link": "/Contact" }
     ],
     "pagelangague": [
-        { "id": 1, "label": "Anglais", "link": "/Home" },
-        { "id": 2, "label": "Espagnol", "link": "/Services" },
-        { "id": 3, "label": "Allemagne", "link": "/Formation" },
-        { "id": 4, "label": "Italie", "link": "/About" },
-        { "id": 5, "label": "Frances", "link": "/Contact" }
+        { "id": 1, "label": "Anglais", "link": "https://oceanconnecting.com/english/learn" },
+        { "id": 2, "label": "Espagnol", "link": "https://oceanconnecting.com/Spain/learn" },
+        { "id": 3, "label": "Allemagne", "link": "https://oceanconnecting.com/German/learn" },
+        { "id": 4, "label": "Italie", "link": "https://oceanconnecting.com/Italie/learn" },
+        { "id": 5, "label": "Frances", "link": "https://oceanconnecting.com/french/learn"  }
     ],
     "ourServices": [
-        { "id": 1, "label": "Development Informatique", "link": "/Development" },
-        { "id": 2, "label": "Formation", "link": "/Formation" },
-        { "id": 3, "label": "Des façades propres", "link": "/facades" },
-        { "id": 4, "label": "Recrutement", "link": "/Recruitment" },
+        { "id": 1, "label": "Development Informatique", "link": "https://www.oceanconnecting.dev" },
+        { "id": 2, "label": "Formation", "link": "/formation-professionnelle-agadir" },
+        { "id": 3, "label": "Des façades propres", "link": "https://www.oceanconnecting.net/en" },
+        { "id": 4, "label": "Recrutement", "link": "/offres-emploi" },
         { "id": 5, "label": "Domiciliation", "link": "/Domiciliation" }
     ],
+
     "ourFormation": [
         { "id": 1, "label": "First aid", "link": "/Development" },
-        { "id": 2, "label": "Dj training", "link": "/Formation" },
-        { "id": 3, "label": "elevator training", "link": "/facades" },
-        { "id": 4, "label": "airport checkin agent training", "link": "/Recruitment" },
-        { "id": 5, "label": "training in cinematography and directing", "link": "/Domiciliation" }
+        { "id": 2, "label": "Dj training", "link": "/formation-professionnelle-agadir/agent-checkin-aeroport-agadir" },
+        { "id": 3, "label": "elevator training", "link": "/formation-professionnelle-agadir/théatre-enfants-agadir"  },
+        { "id": 4, "label": "airport checkin agent training", "link": "/formation-professionnelle-agadir/agent-checkin-aeroport-agadir" },
+        { "id": 5, "label": "training in cinematography and directing", "link": "/formation-professionnelle-agadir/train-tramway-agadir" }
     ],
+
     "footerText": {
         "logoAlt": "RAKAR Logo",
         "mainDescription": "NOUS SOMMES PROFESSIONNELS",
