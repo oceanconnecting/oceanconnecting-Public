@@ -815,7 +815,6 @@ export const footerDataEn = {
     ],
     "ourServices": [
 
-        { "id": 1, "label": "First aid", "link": "/" },
         { "id": 1, "label": "Development Informatique", "link": "https://www.oceanconnecting.dev" },
         { "id": 2, "label": "Formation", "link": "/formation-professionnelle-agadir" },
         { "id": 3, "label": "Clean facades", "link": "https://www.oceanconnecting.net/en" },

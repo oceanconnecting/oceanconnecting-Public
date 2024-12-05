@@ -809,7 +809,7 @@ export const footerDataAr = {
         { "id": 6, "label": "إنشاء شركة", "link": "/" }
     ],
     "ourFormation": [
-        { "id": 1, "label": "تكوين الإسعافات الأولية", "link": "/" },
+        { "id": 1, "label": "تكوين الإسعافات الأولية", "link": "/soins-infirmiers-agadir" },
         { "id": 2, "label": "تكوين الدي جي", "link": "/formation-professionnelle-agadir/agent-checkin-aeroport-agadir"  },
         { "id": 3, "label": "تكوين صيانة المصاعد الألية", "link": "/formation-professionnelle-agadir/théatre-enfants-agadir" },
         { "id": 4, "label": "تكوين وكلاء تسجيل الرحلات بالمطار", "link": "/formation-professionnelle-agadir/agent-checkin-aeroport-agadir"  },
