@@ -245,9 +245,10 @@ export default function Navbar() {
                   </ul>
                 </li>
 
+
                 {/* Lien vers la Formation */}
                 <li className="nav-item ms-0">
-                  <Link className="nav-link" to="/formation-professionnelle-agadir" onClick={closeDropdownOnLinkClick}>
+                  <Link className="nav-link"  to="https://www.oceanconnecting.info" onClick={closeDropdownOnLinkClick}>
                     {t(item.Formation)}
                   </Link>
                 </li>

@@ -163,7 +163,7 @@ const Blogs=React.memo( function Blogs() {
 
         {/* Button to view all trainings with an arrow icon, centered */}
         <div className="flex justify-center mt-12">
-          <Link to="/formation-professionnelle-agadir">
+          <Link to="https://www.oceanconnecting.info">
             <button className="bg-blue-500 text-white rounded-full px-6 py-3 hover:bg-blue-600 transition flex items-center justify-center">
               {t('See All Trainings')}
               <FiArrowRight className="ml-2" /> {/* Icon added next to the text */}
