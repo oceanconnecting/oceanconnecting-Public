@@ -158,7 +158,7 @@ export default function Navbar() {
       `}</style>
  <motion.nav
       ref={navbarRef} // Attach the reference to the navbar
-      className={`navbar fixed top-0 w-full z-50 transition-all duration-300 ${isMobile ? "bg-white shadow-lg" : scroll ? "bg-white shadow-lg" : "bg-transparent"}`}
+      className={`navbar fixed top-0 w-full z-50 transition-all duration-300 ${scroll ? "bg-white shadow-lg" : "bg-white"}`}
       initial={{ y: -100 }}
       animate={{
         y: 0,
