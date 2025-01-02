@@ -114,8 +114,8 @@ export default function Navbar() {
   const isArabic = i18n.language === "ar";
   const fontSize = isArabic ? "font-bold" : "text-base";
   return (
-    <>
-      <style>{`
+      <>
+        <style>{`
         .nav-link {
           transition: transform 0.3s ease, color 0.3s ease;
         }
@@ -156,163 +156,166 @@ export default function Navbar() {
           transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
       `}</style>
- <motion.nav
-      ref={navbarRef} // Attach the reference to the navbar
-      className={`navbar fixed top-0 w-full z-50 transition-all duration-300 ${scroll ? "bg-white shadow-lg" : "bg-white"}`}
-      initial={{ y: -100 }}
-      animate={{
-        y: 0,
-        backgroundColor: scroll ? "#fff" : "rgba(0, 0, 0, 0)",
-      }}
-      transition={{ duration: 0.5 }}
-    >
-        <div className="mx-auto px-4 flex flex-wrap items-center justify-between">
-          {/* Logo */}
-          <Link to="/">
-            <motion.img
-              src={img}
-              className="inline-block"
-              style={{ width: "120px" }}
-              alt="Logo"
-              whileHover={{ scale: 1.1 }}  // Effet hover pour agrandir le logo
-              transition={{ duration: 0.3 }}
-            />
-          </Link>
-
-          {/* Language Switcher et Bouton de menu mobile */}
-          <div className="nav-icons flex items-center lg_992:order-2 ms-auto md:ms-8">
-            <LanguageSwitcher />
-            <button
-              type="button"
-              className="collapse-btn inline-flex items-center ms-2 text-dark lg_992:hidden"
-              onClick={() => setMenuOpen(!menuOpen)}
-            >
-              <span className="sr-only">Navigation Menu</span>
-              <motion.i
-                className="mdi mdi-menu text-[24px]"
-                whileHover={{ rotate: 90 }}  // Effet rotation sur hover pour l'icône du menu
-                transition={{ duration: 0.3 }}
-              />
-            </button>
-          </div>
-
-          {/* Liens de navigation */}
-          <div
-            className={`navigation lg_992:flex ms-auto transition-all ${
-              menuOpen ? "block" : "hidden"
+        <motion.nav
+            ref={navbarRef}
+            className={`navbar fixed top-0 w-full z-50 transition-all duration-300 ${
+                scroll ? "bg-white shadow-lg" : "lg:bg-transparent bg-white"
             }`}
-          >
-            {navbar.map((item, index) => (
-              <ul
-              className={`navbar-nav flex flex-col lg_992:flex-row space-y-2 lg_992:space-y-0 lg_992:space-x-4 ${fontSize}`} // Apply the dynamic font size
-              key={index}
+            initial={{y: -100}}
+            animate={{
+              y: 0,
+              backgroundColor: scroll ? "#fff" : "rgba(0, 0, 0, 0)",
+            }}
+            transition={{duration: 0.5}}
+        >
+          <div className="mx-auto px-4 flex flex-wrap items-center justify-between">
+            {/* Logo */}
+            <Link to="/">
+              <motion.img
+                  src={img}
+                  className="inline-block"
+                  style={{width: "120px"}}
+                  alt="Logo"
+                  whileHover={{scale: 1.1}}  // Effet hover pour agrandir le logo
+                  transition={{duration: 0.3}}
+              />
+            </Link>
+
+            {/* Language Switcher et Bouton de menu mobile */}
+            <div className="nav-icons flex items-center lg_992:order-2 ms-auto md:ms-8">
+              <LanguageSwitcher/>
+              <button
+                  type="button"
+                  className="collapse-btn inline-flex items-center ms-2 text-dark lg_992:hidden"
+                  onClick={() => setMenuOpen(!menuOpen)}
+              >
+                <span className="sr-only">Navigation Menu</span>
+                <motion.i
+                    className="mdi mdi-menu text-[24px]"
+                    whileHover={{rotate: 90}}  // Effet rotation sur hover pour l'icône du menu
+                    transition={{duration: 0.3}}
+                />
+              </button>
+            </div>
+
+            {/* Liens de navigation */}
+            <div
+                className={`navigation lg_992:flex ms-auto transition-all ${
+                    menuOpen ? "block" : "hidden"
+                }`}
             >
-                <li className="nav-item ms-0">
-                  <Link className="nav-link" to="/" onClick={closeDropdownOnLinkClick}>
-                    {t(item.Home)}
-                  </Link>
-                </li>
+              {navbar.map((item, index) => (
+                  <ul
+                      className={`navbar-nav flex flex-col lg_992:flex-row space-y-2 lg_992:space-y-0 lg_992:space-x-4 ${fontSize}`} // Apply the dynamic font size
+                      key={index}
+                  >
+                    <li className="nav-item ms-0">
+                      <Link className="nav-link" to="/" onClick={closeDropdownOnLinkClick}>
+                        {t(item.Home)}
+                      </Link>
+                    </li>
 
-                {/* Dropdown des Services */}
-                <li className="nav-item ms-0 relative">
-                <div className="flex items-center">
-  <button
-    className="nav-link transition duration-300 ease-in-out transform hover:scale-105"
-    onClick={() => handleDropdownToggle("servicesOpen")}
-  >
-    {t(item.Services)}
-  </button>
-  <RiArrowDropDownLine
-    className=" cursor-pointer "
-    fontSize={24}
-    onClick={() => handleDropdownToggle("servicesOpen")}
-  />
-</div>
-
-                  <ul className={`bg-white text-dark shadow-lg rounded-lg p-4 ${dropdowns === "servicesOpen" ? "show" : ""}`}>
-                    {serviceData.map((skill, idx) => (
-                      <li className="nav-item" key={idx}>
-                        <Link
-                          className="nav-link transition duration-200 ease-in-out hover:bg-gray-100 p-2 rounded-md"
-                          to={skill.link}
-                          onClick={closeDropdownOnLinkClick}  // Fermer le dropdown après le clic
-                           target="_blank"
+                    {/* Dropdown des Services */}
+                    <li className="nav-item ms-0 relative">
+                      <div className="flex items-center">
+                        <button
+                            className="nav-link transition duration-300 ease-in-out transform hover:scale-105"
+                            onClick={() => handleDropdownToggle("servicesOpen")}
                         >
-                          {skill.title}
-                        </Link>
-                      </li>
-                    ))}
+                          {t(item.Services)}
+                        </button>
+                        <RiArrowDropDownLine
+                            className=" cursor-pointer "
+                            fontSize={24}
+                            onClick={() => handleDropdownToggle("servicesOpen")}
+                        />
+                      </div>
+
+                      <ul className={`bg-white text-dark shadow-lg rounded-lg p-4 ${dropdowns === "servicesOpen" ? "show" : ""}`}>
+                        {serviceData.map((skill, idx) => (
+                            <li className="nav-item" key={idx}>
+                              <Link
+                                  className="nav-link transition duration-200 ease-in-out hover:bg-gray-100 p-2 rounded-md"
+                                  to={skill.link}
+                                  onClick={closeDropdownOnLinkClick}  // Fermer le dropdown après le clic
+                                  target="_blank"
+                              >
+                                {skill.title}
+                              </Link>
+                            </li>
+                        ))}
+                      </ul>
+                    </li>
+
+
+                    {/* Lien vers la Formation */}
+                    <li className="nav-item ms-0">
+                      <Link className="nav-link" to="https://www.oceanconnecting.info"
+                            onClick={closeDropdownOnLinkClick}>
+                        {t(item.Formation)}
+                      </Link>
+                    </li>
+
+                    {/* Lien vers les Jobs */}
+                    <li className="nav-item ms-0">
+                      <Link className="nav-link" to="/offres-emploi" onClick={closeDropdownOnLinkClick}>
+                        {t(item.Jobs)}
+                      </Link>
+                    </li>
+
+                    {/* Lien vers la Galerie */}
+                    <li className="nav-item ms-0">
+                      <Link className="nav-link" to="/gallery" onClick={closeDropdownOnLinkClick}>
+                        {t(item.gallery)}
+                      </Link>
+                    </li>
+
+                    {/* Lien vers la page "À propos" */}
+                    <li className="nav-item ms-0">
+                      {isHomePage ? (
+                          <ScrollLink
+                              className="nav-link cursor-pointer"
+                              to="about"
+                              smooth={true}
+                              duration={1000}
+                              activeClass="active"
+                              spy={true}
+                              onClick={closeDropdownOnLinkClick}
+                          >
+                            {t(item.About)}
+                          </ScrollLink>
+                      ) : (
+                          <Link className="nav-link cursor-pointer" to="/" onClick={closeDropdownOnLinkClick}>
+                            {t(item.About)}
+                          </Link>
+                      )}
+                    </li>
+
+                    {/* Lien vers la page Contact */}
+                    <li className="nav-item ms-0">
+                      {isHomePage ? (
+                          <ScrollLink
+                              className="nav-link cursor-pointer"
+                              to="contact"
+                              smooth={true}
+                              duration={1000}
+                              activeClass="active"
+                              spy={true}
+                              onClick={closeDropdownOnLinkClick}
+                          >
+                            {t(item.Contact)}
+                          </ScrollLink>
+                      ) : (
+                          <Link className="nav-link cursor-pointer" to="/contact" onClick={closeDropdownOnLinkClick}>
+                            {t(item.Contact)}
+                          </Link>
+                      )}
+                    </li>
                   </ul>
-                </li>
-
-
-                {/* Lien vers la Formation */}
-                <li className="nav-item ms-0">
-                  <Link className="nav-link"  to="https://www.oceanconnecting.info" onClick={closeDropdownOnLinkClick}>
-                    {t(item.Formation)}
-                  </Link>
-                </li>
-
-                {/* Lien vers les Jobs */}
-                <li className="nav-item ms-0">
-                  <Link className="nav-link" to="/offres-emploi" onClick={closeDropdownOnLinkClick}>
-                    {t(item.Jobs)}
-                  </Link>
-                </li>
-
-                {/* Lien vers la Galerie */}
-                <li className="nav-item ms-0">
-                  <Link className="nav-link" to="/gallery" onClick={closeDropdownOnLinkClick}>
-                    {t(item.gallery)}
-                  </Link>
-                </li>
-
-                {/* Lien vers la page "À propos" */}
-                <li className="nav-item ms-0">
-                  {isHomePage ? (
-                    <ScrollLink
-                      className="nav-link cursor-pointer"
-                      to="about"
-                      smooth={true}
-                      duration={1000}
-                      activeClass="active"
-                      spy={true}
-                      onClick={closeDropdownOnLinkClick}
-                    >
-                      {t(item.About)}
-                    </ScrollLink>
-                  ) : (
-                    <Link className="nav-link cursor-pointer" to="/" onClick={closeDropdownOnLinkClick}>
-                      {t(item.About)}
-                    </Link>
-                  )}
-                </li>
-
-                {/* Lien vers la page Contact */}
-                <li className="nav-item ms-0">
-                  {isHomePage ? (
-                    <ScrollLink
-                      className="nav-link cursor-pointer"
-                      to="contact"
-                      smooth={true}
-                      duration={1000}
-                      activeClass="active"
-                      spy={true}
-                      onClick={closeDropdownOnLinkClick}
-                    >
-                      {t(item.Contact)}
-                    </ScrollLink>
-                  ) : (
-                    <Link className="nav-link cursor-pointer" to="/contact" onClick={closeDropdownOnLinkClick}>
-                      {t(item.Contact)}
-                    </Link>
-                  )}
-                </li>
-              </ul>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </motion.nav>
-    </>
+        </motion.nav>
+      </>
   );
 }
