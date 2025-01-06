@@ -122,7 +122,7 @@ const GetInTouch= React.memo( function GetInTouch() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://sendmailocean.onrender.com/Email', {
+      const response = await fetch('https://email-lemon-pi.vercel.app/api/Emailocean', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
