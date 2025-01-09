@@ -1,4 +1,3 @@
-
 import { memo } from "preact/compat";
 import { useTranslation } from "react-i18next";
 import './i18n';
@@ -70,7 +69,7 @@ const Services = () => {
     <div className="bg-gray-50 dark:bg-gray-900 dark:text-white py-16" id="services">
       <div className="container mx-auto px-6 lg:px-8">
         {serviceData.map((skill)=>(
-        <h1 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-10">
+        <h1 className="text-4xl tajawal font-bold text-center text-gray-900 dark:text-white mb-10">
           {t(skill.Servicetitle)}
         </h1>))}
 
@@ -97,7 +96,7 @@ const Services = () => {
 
                 <div className="card-content">
                   {/* Card content */}
-                  <h2 id={`service-title-${skill.id}`} className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+                  <h2 id={`service-title-${skill.id}`} className="text-xl font-semibold tajawal text-gray-800 dark:text-white mb-2">
                     {t(skill.title)}
                   </h2>
 

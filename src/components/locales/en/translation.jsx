@@ -451,7 +451,7 @@ export const NavbarEN = [{
     Contact_us: "Contact us"
 }]
 export const AboutEN=[{
-    h1 : 'About Ocean Connecting ',
+    h1 : 'About Us ',
     ask:"Who Are We ?",
     title:"We specialize in international job placement and document assistance, providing customized support in multiple languages to help you navigate global career opportunities.",
     desc:"Our company provides international job placement services and expert support in multiple languages. We assist clients in finding global career opportunities and offer comprehensive help with document preparation in various languages. Our goal is to facilitate a smooth and effective transition to international careers.",

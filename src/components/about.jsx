@@ -4,6 +4,7 @@ import CountUp from 'react-countup';
 import { motion } from 'framer-motion';
 import { FaGlobe, FaFileAlt } from 'react-icons/fa'; // Importing icons
 import { useTranslation } from "react-i18next";
+
 // Function to load client data based on selected language
 const loadClientData = (lang) => {
   switch (lang) {
@@ -45,7 +46,7 @@ const About = React.memo( function About() {
         >
           <div className="flex items-center space-x-3">
             <FaGlobe className="text-blue-600 text-4xl" /> {/* Icon */}
-            <h3 className="text-4xl font-bold text-gray-900 dark:text-white">
+            <h3 className="text-4xl font-bold tajawal text-gray-900 dark:text-white">
               {t(item.h1)}
             </h3>
           </div>
@@ -90,13 +91,13 @@ const About = React.memo( function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <div className="flex items-center space-x-3">
-            <FaFileAlt className="text-blue-600 text-4xl" /> {/* Icon */}
-            <h6 className="text-blue-600 text-sm font-semibold uppercase tracking-wide">
+          <div className="flex items-center gap-2 space-x-3">
+            <FaFileAlt className="text-blue-600 text-2xl" /> {/* Icon */}
+            <h6 className="text-blue-600 tajawal text-2xl font-semibold uppercase tracking-wide">
               {t(item.Services)}
             </h6>
           </div>
-          <h4 className="text-3xl font-semibold text-gray-800 dark:text-white">
+          <h4 className="text-3xl font-semibold tajawal text-gray-800 dark:text-white">
             {t(item.International)}
           </h4>
           <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">

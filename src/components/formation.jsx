@@ -167,7 +167,7 @@ const CourseCard = React.memo(() => {
                 oninput={handleSearch}
                 className="focus:border-blue-500 transform md:scale-100 scale-110"
               />
-
+ 
               <FilterSelect
                 value={filter}
                 oninput={handleFilterChange}

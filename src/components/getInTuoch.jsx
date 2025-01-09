@@ -160,7 +160,7 @@ const GetInTouch= React.memo( function GetInTouch() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <h3 className="text-2xl font-bold text-gray-800 mb-3">{t(item.title)}</h3>
+          <h3 className="text-2xl tajawal font-bold text-gray-800 mb-3">{t(item.title)}</h3>
           <form onSubmit={handleSubmit}>
             <label htmlFor="name" className="block text-sm font-medium text-gray-700">
               {t(item.name)}
