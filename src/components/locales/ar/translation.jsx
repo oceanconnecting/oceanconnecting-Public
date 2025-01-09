@@ -438,7 +438,7 @@ export const TitleAR=[
     {
         Title:"التعلم والتدريب مع التوظيف الوطني والدولي",
         button:"اتصل بنا",
-        description:" Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut itaque et libero beatae tenetur ipsum doloremque velit numquam consectetur veritatis recusandae facilis, facere, excepturi delectus in maiores nobis voluptatibus asperiores?",
+        description:"منصة شاملة للتعلم والتدريب تُهيئك لسوق العمل الوطني والدولي، مع توفير فرص توظيف عالمية ومساعدة في تجهيز الوثائق لتعزيز مهاراتك وتحقيق طموحاتك المهنية.",
         Learn:"التعرف على المزيد",
     }
 ]

@@ -437,7 +437,7 @@ export const TitleEN = [
     {
         Title: "Language Learning, Training & International Recruitment Services ",
         button: "Contact Us",
-        description:" Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut itaque et libero beatae tenetur ipsum doloremque velit numquam consectetur veritatis recusandae facilis, facere, excepturi delectus in maiores nobis voluptatibus asperiores?",
+        description:"A comprehensive platform for learning and training that prepares you for national and international job markets, offering global employment opportunities and assistance with document preparation to enhance your skills and achieve your professional ambitions.",
         Learn: "Learn More",
     }
 ]

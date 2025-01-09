@@ -456,7 +456,7 @@ export const Titlefr = [
     {
         Title: "Études Formation Recrutement National et International",
         button: "Contactez-nous",
-        description:" Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut itaque et libero beatae tenetur ipsum doloremque velit numquam consectetur veritatis recusandae facilis, facere, excepturi delectus in maiores nobis voluptatibus asperiores?",
+        description:"Une plateforme complète pour l'apprentissage et la formation qui vous prépare aux marchés de l'emploi nationaux et internationaux, avec des opportunités d'emploi mondiales et une assistance pour la préparation des documents, afin de développer vos compétences et réaliser vos ambitions professionnelles.",
         Learn: " Pour en savoir plus",
     }
 ]
