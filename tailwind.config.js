@@ -16,6 +16,7 @@ export default {
     fontFamily: {
       outfit: ['Outfit', 'sans-serif'],
       libre_franklin: ['Libre Franklin', 'sans-serif'],
+      Tajawal: ['Tajawal', 'sans-serif'] 
     },
     container: {
       center: true,
