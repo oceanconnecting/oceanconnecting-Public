@@ -117,7 +117,7 @@ export default function Navbar() {
       <>
         <style>{`
         .nav-link {
-          transition: transform 0.3s ease, color 0.3s ease;
+          transition: transform 0.3s ease, color 0.3s ease; 
         }
         .nav-link:hover {
           transform: scale(1.1);
@@ -210,7 +210,7 @@ export default function Navbar() {
                       key={index}
                   >
                     <li className="nav-item ms-0">
-                      <Link className="nav-link" to="/" onClick={closeDropdownOnLinkClick}>
+                      <Link className="nav-link text-base" to="/" onClick={closeDropdownOnLinkClick}>
                         {t(item.Home)}
                       </Link>
                     </li>
@@ -219,7 +219,7 @@ export default function Navbar() {
                     <li className="nav-item ms-0 relative">
                       <div className="flex items-center">
                         <button
-                            className="nav-link transition duration-300 ease-in-out transform hover:scale-105"
+                            className="nav-link  text-base transition duration-300 ease-in-out transform hover:scale-105"
                             onClick={() => handleDropdownToggle("servicesOpen")}
                         >
                           {t(item.Services)}
@@ -235,7 +235,7 @@ export default function Navbar() {
                         {serviceData.map((skill, idx) => (
                             <li className="nav-item" key={idx}>
                               <Link
-                                  className="nav-link transition duration-200 ease-in-out hover:bg-gray-100 p-2 rounded-md"
+                                  className="nav-link text-base transition duration-200 ease-in-out hover:bg-gray-100 p-2 rounded-md"
                                   to={skill.link}
                                   onClick={closeDropdownOnLinkClick}  // Fermer le dropdown après le clic
                                   target="_blank"
@@ -250,7 +250,7 @@ export default function Navbar() {
 
                     {/* Lien vers la Formation */}
                     <li className="nav-item ms-0">
-                      <Link className="nav-link" to="https://www.oceanconnecting.info"
+                      <Link className="nav-link text-base" to="https://www.oceanconnecting.info"
                             onClick={closeDropdownOnLinkClick}>
                         {t(item.Formation)}
                       </Link>
@@ -258,14 +258,14 @@ export default function Navbar() {
 
                     {/* Lien vers les Jobs */}
                     <li className="nav-item ms-0">
-                      <Link className="nav-link" to="/offres-emploi" onClick={closeDropdownOnLinkClick}>
+                      <Link className="nav-link text-base" to="/offres-emploi" onClick={closeDropdownOnLinkClick}>
                         {t(item.Jobs)}
                       </Link>
                     </li>
 
                     {/* Lien vers la Galerie */}
                     <li className="nav-item ms-0">
-                      <Link className="nav-link" to="/gallery" onClick={closeDropdownOnLinkClick}>
+                      <Link className="nav-link text-base" to="/gallery" onClick={closeDropdownOnLinkClick}>
                         {t(item.gallery)}
                       </Link>
                     </li>
@@ -274,7 +274,7 @@ export default function Navbar() {
                     <li className="nav-item ms-0">
                       {isHomePage ? (
                           <ScrollLink
-                              className="nav-link cursor-pointer"
+                              className="nav-link text-base cursor-pointer"
                               to="about"
                               smooth={true}
                               duration={1000}
@@ -295,7 +295,7 @@ export default function Navbar() {
                     <li className="nav-item ms-0">
                       {isHomePage ? (
                           <ScrollLink
-                              className="nav-link cursor-pointer"
+                              className="nav-link text-base cursor-pointer"
                               to="contact"
                               smooth={true}
                               duration={1000}
@@ -306,7 +306,7 @@ export default function Navbar() {
                             {t(item.Contact)}
                           </ScrollLink>
                       ) : (
-                          <Link className="nav-link cursor-pointer" to="/contact" onClick={closeDropdownOnLinkClick}>
+                          <Link className="nav-link text-base cursor-pointer" to="/contact" onClick={closeDropdownOnLinkClick}>
                             {t(item.Contact)}
                           </Link>
                       )}

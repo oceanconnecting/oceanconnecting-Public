@@ -32,6 +32,7 @@ export default {
         dark: '#3c4858',
         black: '#161c2d',
         'dark-footer': '#192132',
+        primary : '#3b86ff',
       },
       boxShadow: {
         sm: '0 2px 4px 0 rgb(60 72 88 / 0.15)',

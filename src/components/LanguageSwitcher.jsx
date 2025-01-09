@@ -1,5 +1,5 @@
-
 import { useTranslation } from 'react-i18next';
+
 import saudi from './flags/saudi.png';
 import french from './flags/fr.jpeg';
 import english from './flags/eng.png';
@@ -36,7 +36,7 @@ const LanguageSwitcher = () => {
         <div className="relative">
                 <button 
                     onClick={toggleDropdown} 
-                    className="flex items-center gap-1 space-x-2 border p-2 rounded-2xl"
+                    className="flex items-center flex-row-reverse gap-2 space-x-2 border p-2 rounded-2xl"
                 >
                 <img 
                     src={selectedLanguage === 'ar' ? saudi : selectedLanguage === 'fr' ? french : english} 
@@ -45,28 +45,28 @@ const LanguageSwitcher = () => {
                 />
                 <span>{selectedLanguage.toUpperCase()}</span>
                 </button>
-            
+
             {isOpen && (
-                <div className="absolute right-0 w-48 bg-white rounded-lg border border-gray-300 shadow-lg">
+                <div className={selectedLanguage == 'ar' ? "absolute w-48 -right-28 bg-white rounded-lg border border-gray-300 shadow-lg" : "absolute w-48 right-0 bg-white rounded-lg border border-gray-300 shadow-lg"}>
                     <button 
                         onClick={() => handleLanguageChange('en')} 
-                        className="flex items-center p-2 w-full hover:bg-gray-100"
+                        className="flex flex-row-reverse items-center p-2 w-full gap-2 hover:bg-gray-100"
                     >
-                        <img src={english} alt="English" className="w-6 h-6 mr-2  rounded-lg" />
+                        <img src={english} alt="English" className="w-6 h-6  rounded-lg" />
                         English
                     </button>
                     <button 
                         onClick={() => handleLanguageChange('fr')} 
-                        className="flex items-center p-2 w-full hover:bg-gray-100"
+                        className="flex flex-row-reverse items-center p-2 w-full gap-2 hover:bg-gray-100"
                     >
-                        <img src={french} alt="Français" className="w-6 h-6 mr-2  rounded-lg" />
+                        <img src={french} alt="Français" className="w-6 h-6  rounded-lg" />
                         Français
                     </button>
                     <button 
                         onClick={() => handleLanguageChange('ar')} 
-                        className="flex items-center p-2 w-full hover:bg-gray-100"
+                        className="flex flex-row-reverse items-center p-2 w-full gap-2 hover:bg-gray-100"
                     >
-                        <img src={saudi} alt="العربية" className="w-6 h-6 mr-2 rounded-lg" />
+                        <img src={saudi} alt="العربية" className="w-6 h-6 rounded-lg" />
                         العربية
                     </button>
                 </div>
