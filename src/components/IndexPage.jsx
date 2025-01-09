@@ -7,7 +7,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
 
-// Components
+
 import Navbar from "./navbar";
 import Footer from "./foooter";
 import Switcher from "./switcher";
