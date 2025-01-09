@@ -1,5 +1,5 @@
 // WhatsAppFloatingButton.js
-
+import { FaWhatsapp } from "react-icons/fa";
 import watssap from '../assets/images/WhatsApp.svg'
 
 export const WhatsAppFloatingButton = () => {
@@ -10,16 +10,13 @@ export const WhatsAppFloatingButton = () => {
 
   return (
     <a
+      className="p-4"
       href={whatsappURL}
       target="_blank"
       rel="noopener noreferrer"
       style={styles.button}
     >
-      <img 
-        src={watssap}
-        alt="WhatsApp" 
-        style={styles.icon} 
-      />
+      <FaWhatsapp className="h-8 w-8"/>
     </a>
   );
 };

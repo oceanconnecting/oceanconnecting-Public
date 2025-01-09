@@ -211,7 +211,7 @@ const AgencyTab=React.memo( function AgencyTab() {
               <React.Fragment key={item.id}>
                 <Image src={item.image} />
                 <CardContent>
-                  <Title>{t(item.title2)}</Title>
+                  <Title className="tajawal">{t(item.title2)}</Title>
                   <Description>{t(item.desc2)}</Description>
                   <Link to={`/offres-emploi/${t(item.type)}`}>
                     <CTAButton>

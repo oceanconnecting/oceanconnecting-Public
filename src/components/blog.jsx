@@ -91,7 +91,7 @@ const Blogs=React.memo( function Blogs() {
       <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
         <div className="text-center mb-12">
           {blogData.map((item) => (
-            <h3 className="text-4xl font-bold text-gray-900 dark:text-white mb-4" key={item.id}>
+            <h3 className="text-4xl tajawal font-bold text-gray-900 dark:text-white mb-4" key={item.id}>
               {t(item.Title)}
             </h3>
           ))}
@@ -115,7 +115,7 @@ const Blogs=React.memo( function Blogs() {
     target="_blank"
   rel="noopener" noreferrer
   >
-    <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-blue-500 transition-colors">
+    <h4 className="text-xl tajawal font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-blue-500 transition-colors">
       {t(item.title)}
     </h4>
   </a>
@@ -124,7 +124,7 @@ const Blogs=React.memo( function Blogs() {
     to={`/formation-professionnelle-agadir/${item.Link}`}
     className="block"
   >
-    <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-blue-500 transition-colors">
+    <h4 className="text-xl font-semibold tajawal text-gray-900 dark:text-white mb-2 group-hover:text-blue-500 transition-colors">
       {t(item.title)}
     </h4>
   </Link>
