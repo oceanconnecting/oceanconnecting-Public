@@ -456,6 +456,7 @@ export const Titlefr = [
     {
         Title: "Études Formation Recrutement National et International",
         button: "Contactez-nous",
+        description:" Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut itaque et libero beatae tenetur ipsum doloremque velit numquam consectetur veritatis recusandae facilis, facere, excepturi delectus in maiores nobis voluptatibus asperiores?",
         Learn: " Pour en savoir plus",
     }
 ]

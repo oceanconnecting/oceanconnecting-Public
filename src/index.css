@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  font-family: "Tajawal", serif;
+}
+
 ul li{
     -webkit-margin-start: 0.25rem;
             margin-inline-start: 0.25rem;
@@ -13,4 +17,8 @@ ul li{
   html {
         scroll-behavior: smooth;
       }
-      
+
+
+.tajawal {
+  font-family: "Tajawal", serif;
+}

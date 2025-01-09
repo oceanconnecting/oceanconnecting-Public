@@ -159,7 +159,7 @@ export default function Navbar() {
         <motion.nav
             ref={navbarRef}
             className={`navbar fixed top-0 w-full z-50 transition-all duration-300 ${
-                scroll ? "bg-white shadow-lg" : "lg:bg-transparent bg-white"
+                scroll ? "bg-white shadow-lg" : "bg-white"
             }`}
             initial={{y: -100}}
             animate={{

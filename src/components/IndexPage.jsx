@@ -22,7 +22,7 @@ const GetInTouch = lazy(() => import("./getInTuoch"));
 // Images
 import heroImage1 from "../assets/images/home/nurse.png";
 import heroImage4 from "../assets/images/home/dev.png";
-import heroImage2 from "../assets/images/home/new.jpeg";
+import heroImage2 from "../assets/images/home/buisness.jpg";
 
 // Styled Components
 const Loader = styled.div`
@@ -36,17 +36,17 @@ const Loader = styled.div`
 
 const CTA = styled.button`
   background-color: var(--white);
-  color: #3a86ff;
-  padding: 0.5rem 1rem;
+  color: #fff;
+  background-color: #3a86ff;
+  padding: 1rem;
   margin-top: 1rem;
-  border-radius: 20px;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 15px;
   font-weight: 600;
   display: flex;
   align-items: center;
   transition: transform 0.2s;
-  border: solid 1px blue;
 
   @media only screen and (max-width: 48em) {
     padding: 0.2rem 1rem;
@@ -158,18 +158,16 @@ const Index = React.memo(() => {
 
       {/* Hero Section */}
       <section
-        className="relative overflow-hidden md:py-48 py-40 bg-teal-500/5 dark:bg-sky-500/20"
-        id="home"
-      >
-        <div className="container relative mt-8">
-          <div className="grid md:grid-cols-2 grid-cols-1 gap-6 items-center">
+        style={{ backgroundImage: `url(${heroImage2})` }}
+        className="overflow-hidden flex items-center bg-cover mt-10 bg-center h-screen bg-teal-500/5 dark:bg-sky-500/20" id="home">
+        <div className="bg-black h-full bg-opacity-75 py-0 px-5 w-full flex justify-center text-center">
+          <div className="grid gap-6 max-w-[128] items-center">
             {clientData.map((item, index) => (
-              <div key={index}>
-                <h1 className="font-semibold lg:leading-normal leading-normal tracking-wide text-4xl lg:text-5xl mb-5">
+              <div key={index} className="flex flex-col items-center">
+                <h1 className="font-semibold tajawal text-white leading-[1.15] tracking-wide text-3xl lg:px-44 px-4 lg:text-5xl mb-5">
                   {i18n.t(item.Title)}
                 </h1>
-                <p className="text-slate-400 text-lg max-w-xl">{item.description}</p>
-                <div className="mt-6">
+                <p className="text-slate-100 text-lg max-w-xl">{item.description}</p>                <div className="mt-6">
                   <CTA>
                     <ScrollLink to="contact">
                       {i18n.t(item.button)}{" "}
@@ -179,16 +177,6 @@ const Index = React.memo(() => {
                 </div>
               </div>
             ))}
-            <div className="lg:ms-8">
-              <div className="relative">
-              <img 
-  src={heroImage2} 
-  className="relative top-10 rounded-2xl" 
-  alt="Hero" 
-/>
-
-              </div>
-            </div>
           </div>
         </div>
       </section>
