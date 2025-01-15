@@ -61,7 +61,7 @@ const Gallery = React.memo(() => {
                                         <div className="flex items-center space-x-3 ">
                                             <FaImages className="text-sky-500 text-2xl" />
                                             <span className="text-lg text-gray-700 dark:text-gray-300">
-                                                {t(item.numberimage)}
+                                                {t(item.numberimage)} Images
                                             </span>
                                         </div>
                                     </div>
