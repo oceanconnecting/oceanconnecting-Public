@@ -331,7 +331,7 @@ export const serviceDataEN = [
         para5: "Added Value",
         desc_para5: "Our training stands out for its flexibility and practical approach, incorporating the latest trends and technologies to offer relevant and immediately applicable solutions on the field.",
         Bouton : "Learn more",
-        link:"/formation-professionnelle-agadir",
+        link:"https://www.oceanconnecting.info",
 
     },
     {

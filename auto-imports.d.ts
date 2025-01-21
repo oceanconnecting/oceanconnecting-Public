@@ -6,7 +6,6 @@
 // biome-ignore lint: disable
 export {}
 declare global {
-
   const LInk: typeof import('react-router-dom')['LInk']
   const Link: typeof import('react-router-dom')['Link']
   const useEffect: typeof import('preact/hooks')['useEffect']

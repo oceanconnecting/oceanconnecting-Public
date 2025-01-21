@@ -1,6 +1,6 @@
 
 import L from 'leaflet';
-
+import { useRef } from 'preact/hooks';
 // Import your custom icon image or use a default URL
 import iconUrl from '../assets/icons/location.png'; // Replace with your icon path
 import iconShadowUrl from 'leaflet/dist/images/marker-shadow.png'; // Leaflet's default shadow
