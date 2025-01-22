@@ -285,7 +285,7 @@ export default function Navbar() {
                             {t(item.About)}
                           </ScrollLink>
                       ) : (
-                          <Link className="nav-link cursor-pointer" to="/" onClick={closeDropdownOnLinkClick}>
+                          <Link className="nav-link text-base cursor-pointer" to="/" onClick={closeDropdownOnLinkClick}>
                             {t(item.About)}
                           </Link>
                       )}

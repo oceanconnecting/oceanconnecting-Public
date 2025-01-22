@@ -32,7 +32,7 @@ const About = React.memo( function About() {
   }, [i18n.language]);
 
   return (
-    <section className="relative py-24 bg-gradient-to-b from-gray-50 via-blue-50 to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-hidden" id="about">
+    <section  className="relative py-24 bg-gradient-to-b from-gray-50 via-blue-50 to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-hidden" id="about">
       {serviceAbout.map((item)=>(
       <div className="container mx-auto px-8 max-w-7xl flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12">
         
