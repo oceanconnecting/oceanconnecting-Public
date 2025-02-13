@@ -16,8 +16,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Analytics } from "@vercel/analytics/react"
 import { useLocation,Route,Router ,Routes} from "react-router-dom";
 import NotFoundPage from "./components/NotFoundPage";
-import ReactGA from 'react-ga';
+
 const App=React.memo( function App() {
+
   const location = useLocation();
     useEffect(() => {
         // Add Google Analytics script
@@ -67,7 +68,32 @@ const App=React.memo( function App() {
     position: "absolute",
     width: "100%",
   };
-
+  const submitUrlToBing = async () => {
+    const apiKey = "sampleapikeyEDECC1EA4AE341CC8B6"; // Replace with your actual API key
+    const url = "https://ssl.bing.com/webmaster/api.svc/json/SubmitUrlbatch";
+    
+    const data = {
+      siteUrl: "http://oceanconnecting.ma/"
+    };
+  
+    try {
+      const response = await fetch(`${url}?apikey=${apiKey}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json; charset=utf-8",
+        },
+        body: JSON.stringify(data),
+      });
+  
+      const result = await response.json();
+      console.log("Bing API Response:", result);
+    } catch (error) {
+      console.error("Error submitting URL to Bing:", error);
+    }
+  };
+  useEffect(() => {
+    submitUrlToBing();
+  }, []);
   return (
     
     <HelmetProvider>
