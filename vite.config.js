@@ -40,7 +40,7 @@ export default defineConfig({
       deleteOriginalAssets: false, // Keep original files
     }),
     SitemapPlugin({
-      hostname: 'https://oceanconnecting.ma',
+      hostname: 'https://oceanconnecting.ma/',
       outDir: 'dist',
       routes,
     }),
