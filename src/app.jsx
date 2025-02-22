@@ -73,14 +73,19 @@ const App=React.memo( function App() {
     const url = "https://ssl.bing.com/webmaster/api.svc/json/SubmitUrlbatch";
     
     const data = {
-      siteUrl: "https://oceanconnecting.ma/"
+      siteUrl: "https://oceanconnecting.ma/",
+      httpMessage: "SFRUUC8xLjEgMjAwIE9LCkRhdGU6IFN1biwgMTAgT2N0IDIwMTcgMjM6MjY6MDcgR01UCkFjY2VwdC1SYW5nZXM6IGJ5dGVzCkNvbnRlbnQtTGVuZ3RoOiAxMwpDb25uZWN0aW9uOiBjbG9zZQpDb250ZW50LVR5cGU6IHRleHQvaHRtbAoKSGVsbG8gd29ybGQh",
+      structuredData: "",
+      dynamicServing:"0",
     };
   
     try {
       const response = await fetch(`${url}?apikey=${apiKey}`, {
         method: "POST",
+       
         headers: {
-          "Content-Type": "application/json; charset=utf-8"
+          "Content-Type": "application/json; charset=utf-8",
+            
         },
         body: JSON.stringify(data),
       });
