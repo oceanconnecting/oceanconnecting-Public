@@ -187,7 +187,7 @@ const Index = React.memo(() => {
       <About />
       <GetInTouch />
       <WhatsAppFloatingButton />
-      <Switcher />
+      <Switcher/>
       <Footer />
     </Suspense>
   );

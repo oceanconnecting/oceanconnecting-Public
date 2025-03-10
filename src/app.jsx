@@ -20,27 +20,6 @@ import NotFoundPage from "./components/NotFoundPage";
 const App=React.memo( function App() {
 
   const location = useLocation();
-    useEffect(() => {
-        // Add Google Analytics script
-        const script = document.createElement("script");
-        script.src = `https://www.googletagmanager.com/gtag/js?id=G-LHCVR17P5K`;
-        script.async = true;
-        document.body.appendChild(script);
-
-        // Initialize Google Analytics
-        window.dataLayer = window.dataLayer || [];
-        function gtag(...args) {
-            window.dataLayer.push(args);
-        }
-        gtag("js", new Date());
-        gtag("config", "G-LHCVR17P5K"); // Replace with your Measurement ID
-
-        return () => {
-            // Cleanup script if needed
-            document.body.removeChild(script);
-        };
-    }, []);
-
     const pageVariants = {
     initial: {
       opacity: 0,
@@ -68,37 +47,7 @@ const App=React.memo( function App() {
     position: "absolute",
     width: "100%",
   };
-  const submitUrlToBing = async () => {
-    const apiKey = "sampleapikeyEDECC1EA4AE341CC8B6"; // Replace with your actual API key
-    const url = "https://ssl.bing.com/webmaster/api.svc/json/SubmitUrlbatch";
-    
-    const data = {
-      siteUrl: "https://oceanconnecting.ma/",
-      httpMessage: "SFRUUC8xLjEgMjAwIE9LCkRhdGU6IFN1biwgMTAgT2N0IDIwMTcgMjM6MjY6MDcgR01UCkFjY2VwdC1SYW5nZXM6IGJ5dGVzCkNvbnRlbnQtTGVuZ3RoOiAxMwpDb25uZWN0aW9uOiBjbG9zZQpDb250ZW50LVR5cGU6IHRleHQvaHRtbAoKSGVsbG8gd29ybGQh",
-      structuredData: "",
-      dynamicServing:"0",
-    };
-  
-    try {
-      const response = await fetch(`${url}?apikey=${apiKey}`, {
-        method: "POST",
-       
-        headers: {
-          "Content-Type": "application/json; charset=utf-8",
-            
-        },
-        body: JSON.stringify(data),
-      });
-  
-      const result = await response.json();
-      console.log("Bing API Response:", result);
-    } catch (error) {
-      console.error("Error submitting URL to Bing:", error);
-    }
-  };
-  useEffect(() => {
-    submitUrlToBing();
-  }, []);
+
   return (
     
     <HelmetProvider>

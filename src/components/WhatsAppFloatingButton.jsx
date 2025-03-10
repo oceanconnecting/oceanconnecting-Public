@@ -1,6 +1,4 @@
-// WhatsAppFloatingButton.js
 import { FaWhatsapp } from "react-icons/fa";
-import watssap from '../assets/images/WhatsApp.svg'
 
 export const WhatsAppFloatingButton = () => {
   const phoneNumber = '+212704309787'; // Replace with your WhatsApp number
@@ -10,39 +8,15 @@ export const WhatsAppFloatingButton = () => {
 
   return (
     <a
-      className="p-4"
       href={whatsappURL}
       target="_blank"
       rel="noopener noreferrer"
-      style={styles.button}
+      className="fixed text-lg rounded-full z-10 bottom-6 left-6 size-10 text-center bg-green-500 text-white leading-9 flex justify-center items-center"
+      style={{ boxShadow: '0 2px 10px rgba(0, 0, 0, 0.2)', transition: 'transform 0.3s ease-in-out', animation: 'pulse 2s infinite' }}
     >
-      <FaWhatsapp className="h-8 w-8"/>
+      <FaWhatsapp className="h-6 w-6" />
     </a>
   );
 };
-
-const styles = {
-    button: {
-      position: 'fixed',
-      bottom: '20px',
-      left: '20px',
-      backgroundColor: '#25D366',
-      borderRadius: '50%',
-      padding: '10px',
-      boxShadow: '0 2px 10px rgba(0, 0, 0, 0.2)',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      textDecoration: 'none',
-      color: 'white',
-      zIndex: '1000',
-      transition: 'transform 0.3s ease-in-out',
-      animation: 'pulse 2s infinite'
-    },
-    icon: {
-      width: '40px',
-      height: '40px',
-    },
-  };
 
 export default WhatsAppFloatingButton;
