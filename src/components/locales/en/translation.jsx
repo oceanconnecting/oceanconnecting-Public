@@ -27,7 +27,7 @@ import formation19 from '../../../assets/images/formation/formation19.jpg'
 import service1 from '../../../assets/images/service/service1.png'
 import service2 from '../../../assets/images/service/service2.png'
 import service3 from '../../../assets/images/service/service3.png'
-import service4 from '../../../assets/images/service/service4.png'
+import service4 from '../../../assets/images/service/service4.jpg'
 import service5 from '../../../assets/images/service/service5.png'
 
 
